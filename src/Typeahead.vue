@@ -2,6 +2,7 @@
   <div style="position: relative" :class="{open:showDropdown}">
     <input class="form-control" autocomplete="off"
       v-model="val"
+      :name="name"
       :placeholder="placeholder"
       :type.once="type"
       @blur="showDropdown = false"
@@ -37,6 +38,7 @@ export default {
       type: Function,
       default (item) { return item }
     },
+    name: {type: String},
     placeholder: {type: String},
     template: {type: String},
     type: {type: String, default: 'text'},
